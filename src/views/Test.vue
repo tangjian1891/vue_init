@@ -6,7 +6,7 @@
     <hr />
     <Button type="primary" @click="showToa">点击出现toa,自定义长度</Button>
     <hr />
-    pinia使用
+    <div class="qwer">pinia使用</div>
     <div>{{ productStore.count }}</div>
     <Button type="primary" @click="productStore.count++">点击次数增加</Button>
     <Button type="primary" @click="productStore.$reset()">重置</Button>
@@ -39,3 +39,8 @@ function showToa() {
   );
 }
 </script>
+<style>
+.qwer{
+  font-size: 16px;
+}
+</style>

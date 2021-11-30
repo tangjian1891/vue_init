@@ -5,7 +5,9 @@ import { createLoading } from "@/components/loading";
 import { createDialog } from "./components/toa";
 import { createPinia } from "pinia";
 
+
 import "./utils/init/index"
+
 const app = createApp(App);
 createLoading();
 createDialog();

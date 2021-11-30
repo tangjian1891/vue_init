@@ -1,5 +1,5 @@
 // @ts-nocheck
-import FastClick from "fastclick";
+import { FastClick } from "fastclick"; //这么使用
 // 重写focus方法.
 FastClick.prototype.focus = function (targetElement: any) {
   var length;
@@ -24,6 +24,6 @@ if ("addEventListener" in document) {
     function () {
       FastClick.attach(document.body);
     },
-    false
+    false,
   );
 }

@@ -7,6 +7,8 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from "vue-demi";
 
-
+const qwer = ref(123);
+console.log(qwer.value);
 </script>

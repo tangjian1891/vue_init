@@ -6,24 +6,32 @@
     13
     <Rate v-model="value" />
     还可以啊
-    <button @click="toggle">点击切换</button>
+    <button @click="toggle">点击出现loading.2后关闭</button>
+    <button @click="toast">点击出现toa,自定义长度</button>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { loadingData } from "@/components/loading/loading";
+import { closeLoading, openLoading } from "@/components/loading";
+import { toa } from "@/components/toa";
 import { ref } from "@vue/reactivity";
 import { Button, Rate } from "vant";
 const value = ref(0);
-
 
 function onConfirm() {
   console.log(123);
 }
 
 function toggle() {
-  console.log(loadingData);
-  loadingData.visible=false
-  loadingData.text = Math.random();
+  openLoading
+  setTimeout(() => {
+    closeLoading();
+  }, 2000);
+}
+
+function toast() {
+  console.log("触发执行");
+  // toa("什么啊什么啊 么啊");
+  toa("什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊什么啊 么啊");
 }
 </script>

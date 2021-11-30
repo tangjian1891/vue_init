@@ -1,10 +1,11 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import Loading from "@/components/loading/loading";
+import { createLoading } from "@/components/loading";
+import { createDialog } from "./components/toa";
 
 const app = createApp(App);
-
-app.use(Loading)
+createLoading();
+createDialog();
 app.use(router);
 app.mount("#app");

@@ -1,14 +1,14 @@
 // import vm from "../main";
 (function(document, window) {
-  var html = document.documentElement;
-  var resizeEvt =
+  const html = document.documentElement;
+  const resizeEvt =
     "orientationchange" in window ? "orientationchange" : "resize";
 
   // 处理屏幕尺寸变化函数
-  var handleResize = function() {
-    var clientWidth = html.clientWidth;
+  const handleResize = function() {
+    const clientWidth = html.clientWidth;
     if (!clientWidth) return;
-    var _fontSize; // 最大为40px。 PC端体验最佳
+    let _fontSize; // 最大为40px。 PC端体验最佳
     // 注意:一般不会发生，如果你在浏览器上由PC切换到移动端。那么是没有 window.orientation 属性的。
     if (
       window.orientation === undefined ||
@@ -34,9 +34,9 @@
     // vm.$store.commit("changeScrennOrientation");
 
     // 以下代码是解决软键盘弹起将输入框遮挡住的问题
-    var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-    var nowClientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-    let pageCon = document.getElementsByClassName("page");
+    const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+    const nowClientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+    const pageCon = document.getElementsByClassName("page");
     if(pageCon?.length) {
       if (clientHeight - nowClientHeight > 60 ) {//因为ios有自带的底部高度
         //键盘弹出的事件处理

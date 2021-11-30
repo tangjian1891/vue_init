@@ -2,7 +2,10 @@
   <!-- 全局提示框 -->
   <transition name="fade">
     <div :class="['toast-wrap', positionName2]">
-      <div v-show="visible.value" class="dialog-tips">
+      <div
+        v-show="visible.value"
+        class="dialog-tips"
+      >
         {{ text.value }}
       </div>
     </div>

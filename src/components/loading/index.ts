@@ -16,8 +16,8 @@ export function createLoading() {
 }
 
 let loadingSeed: any = null;
-let duration = 61 * 1000;
-export function openLoading(text: string = "加载中") {
+const duration = 61 * 1000;
+export function openLoading(text = "加载中") {
   // 默认最大持续时间为61s，比axios超时多1秒
   loadingData.visible = true;
   loadingData.text = text;

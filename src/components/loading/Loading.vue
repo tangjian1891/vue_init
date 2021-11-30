@@ -1,6 +1,6 @@
 <template>
   <!-- bug 这里并没有对prop的visible做.value自动拆解，需要手动 -->
-  <div style="border: 1px solid red" v-show="visible.value" ref="loadingRef" class="_loading">
+  <div v-show="visible.value" ref="loadingRef" style="border: 1px solid red" class="_loading">
     <div class="bg-shadow">
       <img class="rotate_img" src="~@/assets/images/loading.png" />
       <p>{{ props.text.value }}</p>
@@ -10,7 +10,7 @@
 
 <script lang="ts" setup>
 import { ref } from "@vue/reactivity";
-import { onMounted } from "@vue/runtime-core";
+import { onMounted, defineProps } from "@vue/runtime-core";
 
 const props = defineProps(["visible", "text"]);
 
@@ -23,7 +23,7 @@ onMounted(() => {
     function (e) {
       e.preventDefault();
     },
-    false
+    false,
   );
 });
 </script>

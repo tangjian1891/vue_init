@@ -2,19 +2,19 @@ import { defineConfig } from "vite";
 import styleImport from "vite-plugin-style-import"; //vite-plugin-style-import插件有bug  https://github.com/anncwb/vite-plugin-style-import/issues/52
 import vue from "@vitejs/plugin-vue";
 import autoprefixer from "autoprefixer";
-
 import pxtorem from "postcss-pxtorem";
-
+import eslintPlugin from "vite-plugin-eslint";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
+    eslintPlugin({ include: ["src/**/*.js", "src/**/*.vue", "src/**/*.ts"] }),
     styleImport({
       libs: [
         {
           libraryName: "vant",
           esModule: true,
-          resolveStyle: (name) => `vant/es/${name}/style`,
+          resolveStyle: name => `vant/es/${name}/style`,
         },
       ],
     }),

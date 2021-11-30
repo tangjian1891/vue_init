@@ -8,7 +8,7 @@ export const useProductStore = defineStore("product", {
   },
 });
 
-const productStore = useProductStore();
+// const productStore = useProductStore();
 
 // productStore.$subscribe((mutation, state) => {
 //   console.log("变化了");

@@ -1,15 +1,42 @@
 <template>
   <div>
-    <Button type="primary" @click="router.go(-1)">返回</Button>
-    <hr />
-    <Button type="primary" @click="showLoading">点击出现loading.2后关闭</Button>
-    <hr />
-    <Button type="primary" @click="showToa">点击出现toa,自定义长度</Button>
-    <hr />
-    <div class="qwer">pinia使用</div>
+    <Button
+      type="primary"
+      @click="router.go(-1)"
+    >
+      返回
+    </Button>
+    <hr>
+    <Button
+      type="primary"
+      @click="showLoading"
+    >
+      点击出现loading.2后关闭
+    </Button>
+    <hr>
+    <Button
+      type="primary"
+      @click="showToa"
+    >
+      点击出现toa,自定义长度
+    </Button>
+    <hr>
+    <div class="qwer">
+      pinia使用
+    </div>
     <div>{{ productStore.count }}</div>
-    <Button type="primary" @click="productStore.count++">点击次数增加</Button>
-    <Button type="primary" @click="productStore.$reset()">重置</Button>
+    <Button
+      type="primary"
+      @click="productStore.count++"
+    >
+      点击次数增加
+    </Button>
+    <Button
+      type="primary"
+      @click="productStore.$reset()"
+    >
+      重置
+    </Button>
   </div>
 </template>
 

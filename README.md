@@ -1,11 +1,15 @@
-# Vue 3 + Typescript + Vite
+ 关于eslint配置
+ eslint   eslint本身核心
+ eslint-plugin-vue  vue官方eslint插件
+ @typescript-eslint/eslint-plugin  typescript的插件
+ @typescript-eslint/parser        typescript对应解析器
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+ vite-plugin-eslint  vite运行时的eslint检查插件，需要在vite.
+ 
+ eslint-define-config   eslint配置定义提示
 
-## Recommended IDE Setup
+ config.js中配置
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+ 还需要在.eslintrc.js中做细化规则配置
 
-## Type Support For `.vue` Imports in TS
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.

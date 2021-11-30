@@ -17,7 +17,7 @@ export function createDialog() {
   document.body.appendChild(mountNode);
 }
 let toaSeed: any = null;
-export function toa(text: string = "") {
+export function toa(text = "") {
   console.log('执行了');
   let duration = 1500;
   if (text.length <= 50) {

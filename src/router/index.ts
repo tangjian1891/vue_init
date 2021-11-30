@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, Router } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import syRouter from "./sy-router";
 import tjRouter from "./tj-router";
 

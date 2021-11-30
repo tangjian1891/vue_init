@@ -10,6 +10,6 @@
 
  config.js中配置
 
- 还需要在.eslintrc.js中做细化规则配置
+ 还需要在.eslintrc.js中做细化规则配置   参考:https://juejin.cn/post/7002869322737516581#heading-1
 
 
